@@ -1,3 +1,26 @@
+/* ============== COMMON STYLES ============== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
 /* Маркери списку */
 .list {
     list-style-type: none;
@@ -15,7 +38,60 @@ body {
     color: #434455;
     background-color: #FFFFFF;
 }
-/* HEADER */
+
+/* .accent-color { */
+    /* color: #fd9222; */
+/* } */
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: -0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #111111;
+}
+/* Приховуваний елемент */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+  
+.container {
+    width: 1158px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+  
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* ============== /COMMON STYLES ============== */  
+
+/* ============== HEADER ============== */
+.page-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.page-navigation-heder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .menu-link:hover,
 .menu-link:focus,
 .connect-link:hover,
@@ -34,17 +110,27 @@ body {
     line-height: 1.17; /* 116.667% */
     letter-spacing: 0.03em; 
     text-transform: uppercase;
+    margin-right: 70px;
 }
 span {
     color: #2e2f42;
 }
 .menu-link {
-   font-size: 16px;
-   font-weight: 500;
-   line-height: 1.5; /* 150% */
-   letter-spacing: 0.02em;
-   color: #2E2F42;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.02em;
+    color: #2E2F42;
 }
+
+.menu {
+   display: flex;
+   column-gap: 40px;
+}
+
 .connect-link {
     color:  #434455;
     font-family: Roboto, sans-serif;
@@ -57,9 +143,14 @@ span {
 .connect {
     font-style: normal;
 }
-/* MOTTO */
+/* ============== /HEADER ============== */
+
+/* ============== MOTTO ============== */
 .size-section {
     background:  #2E2F42;
+    height: 600px;
+    /* padding-top: 188px; */
+    /* padding-bottom: 188px; */
 }
 .main-title {
     color:  #ffffff;
@@ -68,17 +159,30 @@ span {
     font-weight: 700;
     line-height: 1.07; /* 107.143% */
     letter-spacing: 0.02em;
+    width: 496px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
 }
 .button-connect {
     background:  #4D5AE5;
     font-family: "Roboto", sans-serif;
     letter-spacing: 0.04em;
-    color: #ffffff
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
+/* ============== /MOTTO ============== */
 
-/* BENEFITS */
-.hidden-title {
-    opacity: 0;
+/* ============== BENEFITS ============== */
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+}
+.container-benefits {
+    width: calc(( 100% - 72px ) / 4);   
 }
 .benefits-title {
     color:  #2E2F42;
@@ -86,6 +190,8 @@ span {
     font-weight: 500;
     line-height: 1.2; /* 120% */
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    
 }
 .benefits-content {
     color:  #434455;
@@ -93,10 +199,22 @@ span {
     font-weight: 400;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
+
 }
-/*  Our Team */
+/* ============== /BENEFITS ============== */
+
+/*  ============== Our Team ============== */
+.list-container-team {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+}
 .section-team {
     background-color: #F4F4FD;
+
+}
+.photo-team {
+    margin-bottom: 32px;
 }
 .title-section-team {
     color:  #2E2F42;
@@ -106,6 +224,7 @@ span {
     line-height: 1.11; /* 111.111% */
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 .photo-title {
     color:  #2E2F42;
@@ -122,11 +241,26 @@ span {
     font-weight: 400;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
+    margin-bottom: 32px;
 }
 .list-team {
     background-color: #FFFFFF;
+    width: calc(( 100% - 72px ) / 4);
 }
+/*  ============== /Our Team ============== */
+
 /* Portfolio */
+.list-photo {
+    width: calc(( 100% - 48px ) / 3);
+}
+.container-photo {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+}
+.photo-portfolio {
+    margin-bottom: 32px;
+}
 .title-section-portfolio {
     color:  #2E2F42;
     text-align: center;
@@ -135,6 +269,7 @@ span {
     line-height: 1.11; /* 111.111% */
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 .title-portfolio {
     color:  #2E2F42;
@@ -149,6 +284,7 @@ span {
     font-weight: 400;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
+    margin-bottom: 32px;
 }
 /* Contacts */
 .page-footer {
@@ -170,6 +306,9 @@ span {
     font-weight: 400;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.02em;
+    width: 264px;
+    margin-top: 17px;
+    
 }
 .logo-span {
     color: #f4f4fd;
