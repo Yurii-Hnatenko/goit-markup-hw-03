@@ -286,6 +286,7 @@ span {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
+    row-gap: 48px;
 }
 .photo-portfolio {
     margin-bottom: 32px;
